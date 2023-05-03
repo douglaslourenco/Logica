@@ -1,7 +1,10 @@
 //Algoritmo para capturar as cordenadas do mouse e manipular com um jogo
 
 var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
+var pincel = tela.getContext('2d');
+var acertou = false;
+var max = 600
+var min = 400
 
     pincel.fillStyle = 'lightgray';
     pincel.fillRect(0, 0, 600, 400);
@@ -16,10 +19,6 @@ var tela = document.querySelector('canvas');
         pincel.fill();
     }
 
-    desenhaCirculo(300,200, raio + 20, 'red'); // maior círculo
-    desenhaCirculo(300,200, raio + 10, 'white');
-    desenhaCirculo(300,200, raio, 'red'); // menor circulo
-
     function dispara(evento) {
 
         var x = evento.pageX - tela.offsetLeft;
@@ -27,10 +26,16 @@ var tela = document.querySelector('canvas');
 
        // lógica de acerto?
        if (x < 310 && x > 290 && y < 210 && y > 190) {
+        acertou = true
         alert('acertou');
        }
 
        console.log("X: "+x+"Y: "+y);
+    
     }
 
     tela.onclick = dispara;
+    
+    desenhaCirculo(300,200, raio + 20, 'red'); // maior círculo
+    desenhaCirculo(300,200, raio + 10, 'white');
+    desenhaCirculo(300,200, raio, 'red'); // menor circulo
