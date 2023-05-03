@@ -17,11 +17,28 @@ function limpaTela() {
 
 
 
-var a = 20
+/*var a = 20
 function atualizaTela () {
     limpaTela();
     a ++;
     desenhaCirculo(a, 20, 10);
+}*/
+
+var x = 20;
+var sentido = 1;
+
+function atualizaTela () {
+    limpaTela();
+    if (x > 600) {
+        sentido = -1;
+
+    } else if (x < 0) {
+        sentido = 1;
+    }
+    desenhaCirculo(x, 20, 10);
+    x = x + sentido;
 }
+
+
 
 setInterval(atualizaTela, 10)
