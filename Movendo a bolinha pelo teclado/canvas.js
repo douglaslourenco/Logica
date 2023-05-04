@@ -50,6 +50,7 @@ var tela = document.querySelector('canvas');
         }
     }
 
+
     document.onkeydown = leDoTeclado;
 
     setInterval(atualizaTela, 20);
