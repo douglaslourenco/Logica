@@ -32,4 +32,4 @@ var tela = document.querySelector('canvas');
         raio = raio + sentido;
     }
 
-    setInterval(pulsar, 20)
+    setInterval(pulsar, 1000)
