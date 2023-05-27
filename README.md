@@ -1,2 +1,2 @@
-# JavaScript-HTML
+# JavaScript
 Lógica da Programação com JavaScript e HTML
